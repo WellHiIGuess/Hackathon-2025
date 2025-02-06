@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://answer.gd" id="1_7w1qs"]
 [ext_resource type="Script" path="res://question.gd" id="1_tdlni"]
 [ext_resource type="FontFile" uid="uid://4urhgi07sb8m" path="res://Pixelme.ttf" id="2_oj2g6"]
-[ext_resource type="Texture2D" uid="uid://hrfsvdmnql6x" path="res://pixel-parchment.png" id="3_sag76"]
+[ext_resource type="Texture2D" uid="uid://oucc4senqxy6" path="res://goldwindow.png" id="4_gflmx"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ti4ri"]
 
@@ -16,7 +16,6 @@ font_size = 41
 [sub_resource type="LabelSettings" id="LabelSettings_ddc6l"]
 font = ExtResource("2_oj2g6")
 font_size = 50
-font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8sio2"]
 
@@ -38,15 +37,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -2.00001
-offset_top = -120.0
-offset_right = 198.0
-offset_bottom = -69.0
+offset_left = -107.0
+offset_top = -136.0
+offset_right = 484.0
+offset_bottom = -77.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.643, 0.812)
+scale = Vector2(0.361975, 0.38948)
 text = "Question"
 label_settings = SubResource("LabelSettings_i82s5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Answer1" type="Area2D" parent="." node_paths=PackedStringArray("text", "question")]
 position = Vector2(-280, 90)
@@ -61,13 +63,14 @@ scale = Vector2(12.7521, 2.10825)
 shape = SubResource("RectangleShape2D_214cf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Answer1/CollisionShape2D"]
-scale = Vector2(0.21, 0.58)
-texture = ExtResource("3_sag76")
+texture_filter = 1
+scale = Vector2(0.11, 0.17)
+texture = ExtResource("4_gflmx")
 
 [node name="Label" type="Label" parent="Answer1/CollisionShape2D"]
 offset_left = -8.93969
 offset_top = -7.1149
-offset_right = 191.06
+offset_right = 210.06
 offset_bottom = 43.8851
 scale = Vector2(0.023, 0.15)
 text = "Question"
@@ -85,18 +88,15 @@ position = Vector2(103, -32)
 scale = Vector2(12.7521, 2.10825)
 shape = SubResource("RectangleShape2D_214cf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Answer2/CollisionShape2D"]
-scale = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_8sio2")
-
 [node name="Sprite2D3" type="Sprite2D" parent="Answer2/CollisionShape2D"]
-scale = Vector2(0.21, 0.58)
-texture = ExtResource("3_sag76")
+texture_filter = 1
+scale = Vector2(0.11, 0.17)
+texture = ExtResource("4_gflmx")
 
 [node name="Label" type="Label" parent="Answer2/CollisionShape2D"]
 offset_left = -8.93969
 offset_top = -7.1149
-offset_right = 191.06
+offset_right = 210.06
 offset_bottom = 43.8851
 scale = Vector2(0.023, 0.15)
 text = "Question"
@@ -119,13 +119,14 @@ scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_8sio2")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Answer3/CollisionShape2D"]
-scale = Vector2(0.21, 0.58)
-texture = ExtResource("3_sag76")
+texture_filter = 1
+scale = Vector2(0.11, 0.17)
+texture = ExtResource("4_gflmx")
 
 [node name="Label" type="Label" parent="Answer3/CollisionShape2D"]
 offset_left = -8.93969
 offset_top = -7.1149
-offset_right = 191.06
+offset_right = 210.06
 offset_bottom = 43.8851
 scale = Vector2(0.023, 0.15)
 text = "Question"
@@ -148,13 +149,14 @@ scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_8sio2")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Answer4/CollisionShape2D"]
-scale = Vector2(0.21, 0.58)
-texture = ExtResource("3_sag76")
+texture_filter = 1
+scale = Vector2(0.11, 0.17)
+texture = ExtResource("4_gflmx")
 
 [node name="Label" type="Label" parent="Answer4/CollisionShape2D"]
 offset_left = -8.93969
 offset_top = -7.1149
-offset_right = 191.06
+offset_right = 210.06
 offset_bottom = 43.8851
 scale = Vector2(0.023, 0.15)
 text = "Question"

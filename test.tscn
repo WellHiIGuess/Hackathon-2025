@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://78su7aki1q6"]
+[gd_scene load_steps=40 format=4 uid="uid://78su7aki1q6"]
 
 [ext_resource type="Texture2D" uid="uid://djqediyttiekd" path="res://Fantasy RPG (Toony) 32x32.png" id="1_nq6w5"]
 [ext_resource type="Script" path="res://player.gd" id="1_oa151"]
@@ -6475,6 +6475,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_fnofp"]
+font = ExtResource("9_1w2u5")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hsyn"]
 atlas = ExtResource("6_02po6")
 region = Rect2(0, 0, 20, 20)
@@ -6604,12 +6607,16 @@ question_data = NodePath("../../../QuestionData")
 player = NodePath("../..")
 
 [node name="Coins" type="Node2D" parent="Player/Camera2D"]
-position = Vector2(269, -181)
+texture_filter = 1
+position = Vector2(227, -181)
+scale = Vector2(2.7, 2.7)
 
 [node name="Label" type="Label" parent="Player/Camera2D/Coins"]
+offset_top = 5.55556
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 28.5556
 text = "0"
+label_settings = SubResource("LabelSettings_fnofp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/Camera2D/Coins"]
 texture_filter = 1
@@ -6635,6 +6642,7 @@ scale = Vector2(0.11, 0.17)
 texture = ExtResource("8_st3pt")
 
 [node name="Label" type="Label" parent="Player/Camera2D/Upgrader/Tier0/CollisionShape2D"]
+texture_filter = 1
 offset_left = -8.93969
 offset_top = -7.1149
 offset_right = 191.06
@@ -6663,6 +6671,7 @@ scale = Vector2(0.11, 0.17)
 texture = ExtResource("8_st3pt")
 
 [node name="Label" type="Label" parent="Player/Camera2D/Upgrader/Tier1/CollisionShape2D"]
+texture_filter = 1
 offset_left = -8.93969
 offset_top = -7.1149
 offset_right = 191.06
@@ -6693,6 +6702,7 @@ scale = Vector2(0.11, 0.17)
 texture = ExtResource("8_st3pt")
 
 [node name="Label" type="Label" parent="Player/Camera2D/Upgrader/Tier2/CollisionShape2D"]
+texture_filter = 1
 offset_left = -8.93969
 offset_top = -7.1149
 offset_right = 191.06
@@ -6724,6 +6734,7 @@ scale = Vector2(0.11, 0.17)
 texture = ExtResource("8_st3pt")
 
 [node name="Label" type="Label" parent="Player/Camera2D/Upgrader/Tier3/CollisionShape2D"]
+texture_filter = 1
 offset_left = -8.93969
 offset_top = -7.1149
 offset_right = 191.06
