@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://78su7aki1q6"]
+[gd_scene load_steps=7 format=3 uid="uid://78su7aki1q6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_oa151"]
 [ext_resource type="PackedScene" uid="uid://bl3ig6w6gtl7c" path="res://question.tscn" id="2_7h58i"]
 [ext_resource type="PackedScene" uid="uid://c1foby3hac276" path="res://question_area.tscn" id="2_qsren"]
+[ext_resource type="Script" path="res://question_data.gd" id="4_aisgm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig5om"]
 
@@ -24,7 +25,12 @@ texture = SubResource("PlaceholderTexture2D_b1b2p")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.76, 1.76)
 
-[node name="Question" parent="Player/Camera2D" instance=ExtResource("2_7h58i")]
+[node name="Question" parent="Player/Camera2D" node_paths=PackedStringArray("question_data") instance=ExtResource("2_7h58i")]
+visible = false
+question_data = NodePath("../../../QuestionData")
 
 [node name="QuestionArea" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_qsren")]
 player = NodePath("../Player")
+
+[node name="QuestionData" type="Node2D" parent="."]
+script = ExtResource("4_aisgm")

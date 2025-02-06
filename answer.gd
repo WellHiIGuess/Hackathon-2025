@@ -3,6 +3,7 @@ extends Area2D
 
 var can_click = false
 @export var correct = true
+@export var text: Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

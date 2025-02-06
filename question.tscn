@@ -3,10 +3,6 @@
 [ext_resource type="Script" path="res://answer.gd" id="1_7w1qs"]
 [ext_resource type="Script" path="res://question.gd" id="1_tdlni"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_214cf"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8sio2"]
-
 [sub_resource type="FontFile" id="FontFile_fw6ce"]
 cache/0/50/0/ascent = 0.0
 cache/0/50/0/descent = 0.0
@@ -23,12 +19,36 @@ cache/0/16/0/scale = 1.0
 font = SubResource("FontFile_fw6ce")
 font_size = 50
 
-[node name="Question" type="Node2D"]
-script = ExtResource("1_tdlni")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_214cf"]
 
-[node name="Answer1" type="Area2D" parent="."]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8sio2"]
+
+[node name="Question" type="Node2D" node_paths=PackedStringArray("question_label", "answers")]
+position = Vector2(1, 0)
+script = ExtResource("1_tdlni")
+question_label = NodePath("Question")
+answers = [NodePath("Answer1"), NodePath("Answer2"), NodePath("Answer3"), NodePath("Answer4")]
+
+[node name="Question" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.00001
+offset_top = -120.0
+offset_right = 198.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.643, 0.812)
+text = "Question"
+label_settings = SubResource("LabelSettings_ddc6l")
+
+[node name="Answer1" type="Area2D" parent="." node_paths=PackedStringArray("text")]
 position = Vector2(-280, 90)
 script = ExtResource("1_7w1qs")
+text = NodePath("CollisionShape2D/Label")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer1"]
 position = Vector2(103, -32)
@@ -48,10 +68,11 @@ scale = Vector2(0.023, 0.15)
 text = "Question"
 label_settings = SubResource("LabelSettings_ddc6l")
 
-[node name="Answer2" type="Area2D" parent="."]
+[node name="Answer2" type="Area2D" parent="." node_paths=PackedStringArray("text")]
 position = Vector2(73, 90)
 script = ExtResource("1_7w1qs")
 correct = false
+text = NodePath("CollisionShape2D/Label")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer2"]
 position = Vector2(103, -32)
@@ -71,10 +92,11 @@ scale = Vector2(0.023, 0.15)
 text = "Question"
 label_settings = SubResource("LabelSettings_ddc6l")
 
-[node name="Answer3" type="Area2D" parent="."]
+[node name="Answer3" type="Area2D" parent="." node_paths=PackedStringArray("text")]
 position = Vector2(-280, 165)
 script = ExtResource("1_7w1qs")
 correct = false
+text = NodePath("CollisionShape2D/Label")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer3"]
 position = Vector2(103, -32)
@@ -94,10 +116,11 @@ scale = Vector2(0.023, 0.15)
 text = "Question"
 label_settings = SubResource("LabelSettings_ddc6l")
 
-[node name="Answer4" type="Area2D" parent="."]
+[node name="Answer4" type="Area2D" parent="." node_paths=PackedStringArray("text")]
 position = Vector2(73, 165)
 script = ExtResource("1_7w1qs")
 correct = false
+text = NodePath("CollisionShape2D/Label")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer4"]
 position = Vector2(103, -32)
