@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://78su7aki1q6"]
+[gd_scene load_steps=5 format=3 uid="uid://78su7aki1q6"]
 
-[node name="test" type="Node2D"]
+[ext_resource type="Script" path="res://player.gd" id="1_oa151"]
+[ext_resource type="PackedScene" uid="uid://c1foby3hac276" path="res://question_area.tscn" id="2_qsren"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig5om"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_b1b2p"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_oa151")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_ig5om")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/CollisionShape2D"]
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_b1b2p")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.76, 1.76)
+
+[node name="QuestionArea" parent="." instance=ExtResource("2_qsren")]
