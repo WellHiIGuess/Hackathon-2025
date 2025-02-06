@@ -45,10 +45,12 @@ scale = Vector2(0.643, 0.812)
 text = "Question"
 label_settings = SubResource("LabelSettings_ddc6l")
 
-[node name="Answer1" type="Area2D" parent="." node_paths=PackedStringArray("text")]
+[node name="Answer1" type="Area2D" parent="." node_paths=PackedStringArray("text", "question")]
 position = Vector2(-280, 90)
 script = ExtResource("1_7w1qs")
+correct = false
 text = NodePath("CollisionShape2D/Label")
+question = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer1"]
 position = Vector2(103, -32)
@@ -68,11 +70,12 @@ scale = Vector2(0.023, 0.15)
 text = "Question"
 label_settings = SubResource("LabelSettings_ddc6l")
 
-[node name="Answer2" type="Area2D" parent="." node_paths=PackedStringArray("text")]
+[node name="Answer2" type="Area2D" parent="." node_paths=PackedStringArray("text", "question")]
 position = Vector2(73, 90)
 script = ExtResource("1_7w1qs")
 correct = false
 text = NodePath("CollisionShape2D/Label")
+question = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer2"]
 position = Vector2(103, -32)
@@ -92,11 +95,12 @@ scale = Vector2(0.023, 0.15)
 text = "Question"
 label_settings = SubResource("LabelSettings_ddc6l")
 
-[node name="Answer3" type="Area2D" parent="." node_paths=PackedStringArray("text")]
+[node name="Answer3" type="Area2D" parent="." node_paths=PackedStringArray("text", "question")]
 position = Vector2(-280, 165)
 script = ExtResource("1_7w1qs")
 correct = false
 text = NodePath("CollisionShape2D/Label")
+question = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer3"]
 position = Vector2(103, -32)
@@ -116,11 +120,12 @@ scale = Vector2(0.023, 0.15)
 text = "Question"
 label_settings = SubResource("LabelSettings_ddc6l")
 
-[node name="Answer4" type="Area2D" parent="." node_paths=PackedStringArray("text")]
+[node name="Answer4" type="Area2D" parent="." node_paths=PackedStringArray("text", "question")]
 position = Vector2(73, 165)
 script = ExtResource("1_7w1qs")
 correct = false
 text = NodePath("CollisionShape2D/Label")
+question = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Answer4"]
 position = Vector2(103, -32)

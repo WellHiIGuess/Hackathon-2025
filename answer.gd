@@ -4,6 +4,7 @@ extends Area2D
 var can_click = false
 @export var correct = true
 @export var text: Label
+@export var question: Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,10 +16,7 @@ func _process(delta):
 	if can_click && Input.is_action_just_pressed("click") && get_parent().visible:
 		if correct:
 			# give points
-			pass
-		else:
-			# don't give points
-			pass
+			question.player.coins += 1
 
 		get_parent().visible = false
 
