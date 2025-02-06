@@ -3,6 +3,15 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
+var main_scene
+var question_scene = load("res://question.tscn")
+@export var question: Node2D
+
+func _ready():
+	main_scene = get_tree().current_scene
+	question.visible = false
+	pass
+
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

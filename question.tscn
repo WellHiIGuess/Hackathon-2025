@@ -1,3 +1,127 @@
-[gd_scene format=3 uid="uid://bl3ig6w6gtl7c"]
+[gd_scene load_steps=7 format=3 uid="uid://bl3ig6w6gtl7c"]
+
+[ext_resource type="Script" path="res://answer.gd" id="1_7w1qs"]
+[ext_resource type="Script" path="res://question.gd" id="1_tdlni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_214cf"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8sio2"]
+
+[sub_resource type="FontFile" id="FontFile_fw6ce"]
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ddc6l"]
+font = SubResource("FontFile_fw6ce")
+font_size = 50
 
 [node name="Question" type="Node2D"]
+script = ExtResource("1_tdlni")
+
+[node name="Answer1" type="Area2D" parent="."]
+position = Vector2(-280, 90)
+script = ExtResource("1_7w1qs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer1"]
+position = Vector2(103, -32)
+scale = Vector2(12.7521, 2.10825)
+shape = SubResource("RectangleShape2D_214cf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Answer1/CollisionShape2D"]
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_8sio2")
+
+[node name="Label" type="Label" parent="Answer1/CollisionShape2D"]
+offset_left = -8.93969
+offset_top = -7.1149
+offset_right = 191.06
+offset_bottom = 43.8851
+scale = Vector2(0.023, 0.15)
+text = "Question"
+label_settings = SubResource("LabelSettings_ddc6l")
+
+[node name="Answer2" type="Area2D" parent="."]
+position = Vector2(73, 90)
+script = ExtResource("1_7w1qs")
+correct = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer2"]
+position = Vector2(103, -32)
+scale = Vector2(12.7521, 2.10825)
+shape = SubResource("RectangleShape2D_214cf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Answer2/CollisionShape2D"]
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_8sio2")
+
+[node name="Label" type="Label" parent="Answer2/CollisionShape2D"]
+offset_left = -8.93969
+offset_top = -7.1149
+offset_right = 191.06
+offset_bottom = 43.8851
+scale = Vector2(0.023, 0.15)
+text = "Question"
+label_settings = SubResource("LabelSettings_ddc6l")
+
+[node name="Answer3" type="Area2D" parent="."]
+position = Vector2(-280, 165)
+script = ExtResource("1_7w1qs")
+correct = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer3"]
+position = Vector2(103, -32)
+scale = Vector2(12.7521, 2.10825)
+shape = SubResource("RectangleShape2D_214cf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Answer3/CollisionShape2D"]
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_8sio2")
+
+[node name="Label" type="Label" parent="Answer3/CollisionShape2D"]
+offset_left = -8.93969
+offset_top = -7.1149
+offset_right = 191.06
+offset_bottom = 43.8851
+scale = Vector2(0.023, 0.15)
+text = "Question"
+label_settings = SubResource("LabelSettings_ddc6l")
+
+[node name="Answer4" type="Area2D" parent="."]
+position = Vector2(73, 165)
+script = ExtResource("1_7w1qs")
+correct = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Answer4"]
+position = Vector2(103, -32)
+scale = Vector2(12.7521, 2.10825)
+shape = SubResource("RectangleShape2D_214cf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Answer4/CollisionShape2D"]
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_8sio2")
+
+[node name="Label" type="Label" parent="Answer4/CollisionShape2D"]
+offset_left = -8.93969
+offset_top = -7.1149
+offset_right = 191.06
+offset_bottom = 43.8851
+scale = Vector2(0.023, 0.15)
+text = "Question"
+label_settings = SubResource("LabelSettings_ddc6l")
+
+[connection signal="mouse_entered" from="Answer1" to="Answer1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Answer1" to="Answer1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Answer2" to="Answer2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Answer2" to="Answer2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Answer3" to="Answer3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Answer3" to="Answer3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Answer4" to="Answer4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Answer4" to="Answer4" method="_on_mouse_exited"]
