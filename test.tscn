@@ -6703,7 +6703,7 @@ offset_top = -7.1149
 offset_right = 191.06
 offset_bottom = 43.8851
 scale = Vector2(0.023, 0.15)
-text = "Tier 1"
+text = "Wood Chest"
 label_settings = SubResource("LabelSettings_4gie6")
 
 [node name="Tier1" type="Area2D" parent="Player/Camera2D/Upgrader" node_paths=PackedStringArray("upgrader", "player")]
@@ -6732,7 +6732,7 @@ offset_top = -7.1149
 offset_right = 191.06
 offset_bottom = 43.8851
 scale = Vector2(0.023, 0.15)
-text = "Tier 2
+text = "Silver Chest
 Cost: 10
 "
 label_settings = SubResource("LabelSettings_4gie6")
@@ -6763,7 +6763,7 @@ offset_top = -7.1149
 offset_right = 191.06
 offset_bottom = 43.8851
 scale = Vector2(0.023, 0.15)
-text = "Tier 3
+text = "Ancient Chest
 Cost: 30
 "
 label_settings = SubResource("LabelSettings_4gie6")
@@ -6790,12 +6790,12 @@ texture = ExtResource("8_st3pt")
 
 [node name="Label" type="Label" parent="Player/Camera2D/Upgrader/Tier3/CollisionShape2D"]
 texture_filter = 1
-offset_left = -8.93969
-offset_top = -7.1149
-offset_right = 191.06
-offset_bottom = 43.8851
+offset_left = -9.05732
+offset_top = -7.69087
+offset_right = 246.943
+offset_bottom = 205.309
 scale = Vector2(0.023, 0.15)
-text = "Tier 4
+text = "Gold Chest
 Cost: 90
 
 
