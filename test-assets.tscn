@@ -1,13 +1,13 @@
-[gd_scene load_steps=13 format=4 uid="uid://llbdh7flnvum"]
+[gd_scene load_steps=13 format=4 uid="uid://bymoxlsihooka"]
 
-[ext_resource type="Texture2D" uid="uid://d2t0qi58ctibn" path="res://Fantasy RPG (Toony) 32x32.png" id="1_miix7"]
-[ext_resource type="Texture2D" uid="uid://d14dmuhr0p6ss" path="res://atlas_32x.png" id="2_8qkm5"]
+[ext_resource type="Texture2D" uid="uid://djqediyttiekd" path="res://Fantasy RPG (Toony) 32x32.png" id="1_miix7"]
+[ext_resource type="Texture2D" uid="uid://bhk7hchd8ltnf" path="res://atlas_32x.png" id="2_8qkm5"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jiq6r"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tx5fi"]
 texture = ExtResource("1_miix7")
 texture_region_size = Vector2i(32, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dymb6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n77yn"]
 texture = ExtResource("2_8qkm5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -1391,10 +1391,10 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_lw7v8"]
 tile_size = Vector2i(32, 16)
-sources/0 = SubResource("TileSetAtlasSource_jiq6r")
-sources/1 = SubResource("TileSetAtlasSource_dymb6")
+sources/0 = SubResource("TileSetAtlasSource_tx5fi")
+sources/1 = SubResource("TileSetAtlasSource_n77yn")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_th5qw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1tvlb"]
 texture = ExtResource("2_8qkm5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -2153,9 +2153,9 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_62xue"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_th5qw")
+sources/0 = SubResource("TileSetAtlasSource_1tvlb")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g1rf3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qenby"]
 texture = ExtResource("2_8qkm5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -3619,9 +3619,9 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_gy4y6"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_g1rf3")
+sources/0 = SubResource("TileSetAtlasSource_qenby")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8eoab"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3sxdt"]
 texture = ExtResource("1_miix7")
 18:0/0 = 0
 19:0/0 = 0
@@ -3816,7 +3816,7 @@ texture = ExtResource("1_miix7")
 6:10/0 = 0
 7:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_in5mv"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfx1a"]
 texture = ExtResource("2_8qkm5")
 0:0/0 = 0
 1:0/0 = 0
@@ -6445,8 +6445,8 @@ texture = ExtResource("2_8qkm5")
 40:20/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gyaik"]
-sources/0 = SubResource("TileSetAtlasSource_8eoab")
-sources/1 = SubResource("TileSetAtlasSource_in5mv")
+sources/0 = SubResource("TileSetAtlasSource_3sxdt")
+sources/1 = SubResource("TileSetAtlasSource_sfx1a")
 
 [node name="test" type="Node2D"]
 

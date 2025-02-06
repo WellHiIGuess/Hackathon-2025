@@ -1,21 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1foby3hac276"]
+[gd_scene load_steps=9 format=3 uid="uid://c1foby3hac276"]
 
 [ext_resource type="Script" path="res://question_area.gd" id="1_1dtxm"]
+[ext_resource type="Texture2D" uid="uid://djqediyttiekd" path="res://Fantasy RPG (Toony) 32x32.png" id="2_hbfml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1dd1"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_b1b2p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3ykr"]
+atlas = ExtResource("2_hbfml")
+region = Rect2(96, 128, 32, 32)
 
-[node name="QuestionArea" type="Area2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4r8q"]
+atlas = ExtResource("2_hbfml")
+region = Rect2(192, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud213"]
+atlas = ExtResource("2_hbfml")
+region = Rect2(288, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j35yq"]
+atlas = ExtResource("2_hbfml")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a2v1o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3ykr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4r8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud213")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j35yq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="QuestionArea" type="Area2D" node_paths=PackedStringArray("sprite")]
 position = Vector2(119, 4)
 script = ExtResource("1_1dtxm")
+sprite = NodePath("CollisionShape2D/AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_f1dd1")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-modulate = Color(0, 1, 1, 1)
-scale = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_b1b2p")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+texture_filter = 1
+position = Vector2(0, -2.08)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_a2v1o")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

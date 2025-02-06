@@ -3,20 +3,20 @@
 [ext_resource type="Script" path="res://answer.gd" id="1_7w1qs"]
 [ext_resource type="Script" path="res://question.gd" id="1_tdlni"]
 
-[sub_resource type="FontFile" id="FontFile_fw6ce"]
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
+[sub_resource type="FontFile" id="FontFile_rpv0t"]
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_ddc6l"]
-font = SubResource("FontFile_fw6ce")
+font = SubResource("FontFile_rpv0t")
 font_size = 50
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_214cf"]

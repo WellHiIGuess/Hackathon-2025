@@ -7,7 +7,7 @@ var last_visible
 
 @export var question_label: Label
 @export var answers: Array[Area2D]
-var level = 1
+var level = 0
 
 func _process(delta):
 	if last_visible != visible && visible:
@@ -21,6 +21,7 @@ func _process(delta):
 			answers[i].correct = current_answers[current_answers.keys()[i]]
 
 		question_label.text = question
+		level = player.current_chest_tier
 
 
 	last_visible = visible

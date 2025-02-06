@@ -15,8 +15,15 @@ func _ready():
 func _process(delta):
 	if can_click && Input.is_action_just_pressed("click") && get_parent().visible:
 		if correct:
-			# give points
-			question.player.coins += 1
+			match question.level:
+				0:
+					question.player.coins += 4
+				1:
+					question.player.coins += 12
+				2:
+					question.player.coins += 33
+				3:
+					question.player.coins += 100
 
 		get_parent().visible = false
 

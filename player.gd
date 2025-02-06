@@ -10,6 +10,8 @@ var question_scene = load("res://question.tscn")
 
 var coins = 0
 
+var current_chest_tier = 0
+
 func _ready():
 	main_scene = get_tree().current_scene
 	question.visible = false
