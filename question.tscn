@@ -1,28 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://bl3ig6w6gtl7c"]
+[gd_scene load_steps=10 format=3 uid="uid://bl3ig6w6gtl7c"]
 
 [ext_resource type="Script" path="res://answer.gd" id="1_7w1qs"]
 [ext_resource type="Script" path="res://question.gd" id="1_tdlni"]
+[ext_resource type="FontFile" uid="uid://4urhgi07sb8m" path="res://Pixelme.ttf" id="2_oj2g6"]
 [ext_resource type="Texture2D" uid="uid://hrfsvdmnql6x" path="res://pixel-parchment.png" id="3_sag76"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ti4ri"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_i82s5"]
+font = ExtResource("2_oj2g6")
 font_size = 41
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_214cf"]
 
-[sub_resource type="FontFile" id="FontFile_rpv0t"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-
 [sub_resource type="LabelSettings" id="LabelSettings_ddc6l"]
-font = SubResource("FontFile_rpv0t")
+font = ExtResource("2_oj2g6")
 font_size = 50
 font_color = Color(0, 0, 0, 1)
 
@@ -33,6 +25,12 @@ position = Vector2(1, 0)
 script = ExtResource("1_tdlni")
 question_label = NodePath("Question")
 answers = [NodePath("Answer1"), NodePath("Answer2"), NodePath("Answer3"), NodePath("Answer4")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.0353878, 0.0450629, 0.200204, 1)
+position = Vector2(12, -69.5)
+scale = Vector2(688, 523)
+texture = SubResource("PlaceholderTexture2D_ti4ri")
 
 [node name="Question" type="Label" parent="."]
 anchors_preset = 8

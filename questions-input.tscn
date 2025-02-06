@@ -8,7 +8,36 @@ script = ExtResource("1_gj43d")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Question1" type="Node2D" parent="."]
+position = Vector2(-223, -294)
 
 [node name="TextEdit" type="TextEdit" parent="Question1"]
-offset_right = 132.0
-offset_bottom = 80.0
+offset_right = 467.0
+offset_bottom = 70.0
+
+[node name="Answer1" type="Node2D" parent="Question1"]
+position = Vector2(-265, 164)
+
+[node name="TextEdit" type="TextEdit" parent="Question1/Answer1"]
+offset_right = 467.0
+offset_bottom = 70.0
+
+[node name="Answer2" type="Node2D" parent="Question1"]
+position = Vector2(252, 160)
+
+[node name="TextEdit" type="TextEdit" parent="Question1/Answer2"]
+offset_right = 467.0
+offset_bottom = 70.0
+
+[node name="Answer3" type="Node2D" parent="Question1"]
+position = Vector2(-274, 348)
+
+[node name="TextEdit" type="TextEdit" parent="Question1/Answer3"]
+offset_right = 467.0
+offset_bottom = 70.0
+
+[node name="Answer4" type="Node2D" parent="Question1"]
+position = Vector2(271, 340)
+
+[node name="TextEdit" type="TextEdit" parent="Question1/Answer4"]
+offset_right = 467.0
+offset_bottom = 70.0
