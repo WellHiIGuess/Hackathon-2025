@@ -11,6 +11,8 @@ var level = 0
 
 func _process(delta):
 	if last_visible != visible && visible:
+		if question_data == null:
+			return
 		var questions = question_data.questions
 		var keys = questions.keys()
 		var question = keys[randi_range(0, keys.size() - 1)]

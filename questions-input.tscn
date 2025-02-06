@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn4yckt24jysv"]
+
+[ext_resource type="Script" path="res://questions_input.gd" id="1_gj43d"]
+
+[node name="Questions-input" type="Node2D"]
+script = ExtResource("1_gj43d")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Question1" type="Node2D" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="Question1"]
+offset_right = 132.0
+offset_bottom = 80.0
