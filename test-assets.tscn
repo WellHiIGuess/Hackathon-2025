@@ -1,14 +1,16 @@
-[gd_scene load_steps=13 format=4 uid="uid://bymoxlsihooka"]
+[gd_scene load_steps=25 format=4 uid="uid://llbdh7flnvum"]
 
-[ext_resource type="Texture2D" uid="uid://djqediyttiekd" path="res://Fantasy RPG (Toony) 32x32.png" id="1_miix7"]
-[ext_resource type="Texture2D" uid="uid://bhk7hchd8ltnf" path="res://atlas_32x.png" id="2_8qkm5"]
+[ext_resource type="Texture2D" uid="uid://d2t0qi58ctibn" path="res://Fantasy RPG (Toony) 32x32.png" id="1_1qvjk"]
+[ext_resource type="Texture2D" uid="uid://d14dmuhr0p6ss" path="res://atlas_32x.png" id="2_0lbf5"]
+[ext_resource type="Script" path="res://Move.gd" id="3_yqrot"]
+[ext_resource type="Texture2D" uid="uid://c7tb6t6mhmc0u" path="res://Walk/walk.png" id="4_lvmgx"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tx5fi"]
-texture = ExtResource("1_miix7")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jiq6r"]
+texture = ExtResource("1_1qvjk")
 texture_region_size = Vector2i(32, 16)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n77yn"]
-texture = ExtResource("2_8qkm5")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dymb6"]
+texture = ExtResource("2_0lbf5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -1391,11 +1393,11 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_lw7v8"]
 tile_size = Vector2i(32, 16)
-sources/0 = SubResource("TileSetAtlasSource_tx5fi")
-sources/1 = SubResource("TileSetAtlasSource_n77yn")
+sources/0 = SubResource("TileSetAtlasSource_jiq6r")
+sources/1 = SubResource("TileSetAtlasSource_dymb6")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1tvlb"]
-texture = ExtResource("2_8qkm5")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_th5qw"]
+texture = ExtResource("2_0lbf5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -2153,10 +2155,10 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_62xue"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_1tvlb")
+sources/0 = SubResource("TileSetAtlasSource_th5qw")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qenby"]
-texture = ExtResource("2_8qkm5")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g1rf3"]
+texture = ExtResource("2_0lbf5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -3619,10 +3621,10 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_gy4y6"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_qenby")
+sources/0 = SubResource("TileSetAtlasSource_g1rf3")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3sxdt"]
-texture = ExtResource("1_miix7")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8eoab"]
+texture = ExtResource("1_1qvjk")
 18:0/0 = 0
 19:0/0 = 0
 20:0/0 = 0
@@ -3816,8 +3818,8 @@ texture = ExtResource("1_miix7")
 6:10/0 = 0
 7:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfx1a"]
-texture = ExtResource("2_8qkm5")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_in5mv"]
+texture = ExtResource("2_0lbf5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -6445,8 +6447,75 @@ texture = ExtResource("2_8qkm5")
 40:20/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gyaik"]
-sources/0 = SubResource("TileSetAtlasSource_3sxdt")
-sources/1 = SubResource("TileSetAtlasSource_sfx1a")
+sources/0 = SubResource("TileSetAtlasSource_8eoab")
+sources/1 = SubResource("TileSetAtlasSource_in5mv")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1yycu"]
+radius = 1.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhwgt"]
+atlas = ExtResource("4_lvmgx")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wj3sa"]
+atlas = ExtResource("4_lvmgx")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfncn"]
+atlas = ExtResource("4_lvmgx")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bldqo"]
+atlas = ExtResource("4_lvmgx")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4yql"]
+atlas = ExtResource("4_lvmgx")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x8hp"]
+atlas = ExtResource("4_lvmgx")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kums2"]
+atlas = ExtResource("4_lvmgx")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wca8"]
+atlas = ExtResource("4_lvmgx")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_paokv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhwgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wj3sa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfncn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bldqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4yql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5x8hp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kums2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wca8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="test" type="Node2D"]
 
@@ -6465,3 +6534,19 @@ tile_set = SubResource("TileSet_gy4y6")
 [node name="Chests" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAA0AOX/AQA8AA4AAAA0AOb/AQA8AA8AAAA1AOX/AQA9AA4AAAA1AOb/AQA9AA8AAAA8AOX/AQAoAAYAAAA8AOb/AQAoAAcAAAA9AOX/AQApAAYAAAA9AOb/AQApAAcAAABJAOT/AQAuABAAAABJAOX/AQAuABEAAABKAOT/AQAvABAAAABKAOX/AQAvABEAAAA=")
 tile_set = SubResource("TileSet_gyaik")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(16, 16)
+script = ExtResource("3_yqrot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_1yycu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(-0.0625, -0.0625)
+scale = Vector2(0.152344, 0.152344)
+sprite_frames = SubResource("SpriteFrames_paokv")
+frame_progress = 0.0956735
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
