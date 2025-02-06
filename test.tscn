@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://78su7aki1q6"]
+[gd_scene load_steps=27 format=4 uid="uid://78su7aki1q6"]
 
 [ext_resource type="Texture2D" uid="uid://djqediyttiekd" path="res://Fantasy RPG (Toony) 32x32.png" id="1_nq6w5"]
 [ext_resource type="Script" path="res://player.gd" id="1_oa151"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c1foby3hac276" path="res://question_area.tscn" id="2_qsren"]
 [ext_resource type="Texture2D" uid="uid://bhk7hchd8ltnf" path="res://atlas_32x.png" id="2_ws7ya"]
 [ext_resource type="Script" path="res://question_data.gd" id="4_aisgm"]
+[ext_resource type="Texture2D" uid="uid://c7tb6t6mhmc0u" path="res://Walk/walk.png" id="4_mimo6"]
 [ext_resource type="Script" path="res://tier_button.gd" id="6_7okak"]
 [ext_resource type="Script" path="res://upgrader.gd" id="7_cgd14"]
 
@@ -6456,7 +6457,20 @@ sources/1 = SubResource("TileSetAtlasSource_5ssg1")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig5om"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_b1b2p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_561fc"]
+atlas = ExtResource("4_mimo6")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ypwv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_561fc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsanl"]
 
@@ -6508,9 +6522,10 @@ coins_label = NodePath("Camera2D/Coins/Label")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_ig5om")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player/CollisionShape2D"]
-scale = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_b1b2p")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/CollisionShape2D"]
+texture_filter = 1
+scale = Vector2(1.19, 1.19)
+sprite_frames = SubResource("SpriteFrames_2ypwv")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.76, 1.76)
@@ -6590,7 +6605,7 @@ script = ExtResource("6_7okak")
 upgrader = NodePath("..")
 player = NodePath("../../..")
 cost = 30
-tier = 1
+tier = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Camera2D/Upgrader/Tier2"]
 position = Vector2(103, -32)
@@ -6618,7 +6633,7 @@ script = ExtResource("6_7okak")
 upgrader = NodePath("..")
 player = NodePath("../../..")
 cost = 90
-tier = 1
+tier = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Camera2D/Upgrader/Tier3"]
 position = Vector2(103, -32)
