@@ -1,12 +1,11 @@
-[gd_scene load_steps=28 format=4 uid="uid://llbdh7flnvum"]
+[gd_scene load_steps=27 format=4 uid="uid://bymoxlsihooka"]
 
-[ext_resource type="Texture2D" uid="uid://d2t0qi58ctibn" path="res://Fantasy RPG (Toony) 32x32.png" id="1_1qvjk"]
-[ext_resource type="Texture2D" uid="uid://dnk8chmg71t1p" path="res://tileset.png" id="1_xlrmb"]
-[ext_resource type="Texture2D" uid="uid://d14dmuhr0p6ss" path="res://atlas_32x.png" id="2_0lbf5"]
-[ext_resource type="Script" path="res://Move.gd" id="3_yqrot"]
+[ext_resource type="Texture2D" uid="uid://djqediyttiekd" path="res://Fantasy RPG (Toony) 32x32.png" id="1_1qvjk"]
+[ext_resource type="Texture2D" uid="uid://pv3bo6vwdj4q" path="res://tileset.png" id="1_xlrmb"]
+[ext_resource type="Texture2D" uid="uid://bhk7hchd8ltnf" path="res://atlas_32x.png" id="2_0lbf5"]
 [ext_resource type="Texture2D" uid="uid://c7tb6t6mhmc0u" path="res://Walk/walk.png" id="4_lvmgx"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lfgd"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iewqg"]
 texture = ExtResource("1_xlrmb")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
@@ -53,7 +52,7 @@ texture_region_size = Vector2i(24, 24)
 
 [sub_resource type="TileSet" id="TileSet_11lt7"]
 tile_size = Vector2i(24, 24)
-sources/1 = SubResource("TileSetAtlasSource_1lfgd")
+sources/1 = SubResource("TileSetAtlasSource_iewqg")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jiq6r"]
 texture = ExtResource("1_1qvjk")
@@ -6591,7 +6590,6 @@ tile_set = SubResource("TileSet_gyaik")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 scale = Vector2(16, 16)
-script = ExtResource("3_yqrot")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CircleShape2D_1yycu")

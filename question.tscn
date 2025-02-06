@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bl3ig6w6gtl7c"]
+[gd_scene load_steps=9 format=3 uid="uid://bl3ig6w6gtl7c"]
 
 [ext_resource type="Script" path="res://answer.gd" id="1_7w1qs"]
 [ext_resource type="Script" path="res://question.gd" id="1_tdlni"]
@@ -16,8 +16,6 @@ font_size = 41
 [sub_resource type="LabelSettings" id="LabelSettings_ddc6l"]
 font = ExtResource("2_oj2g6")
 font_size = 50
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8sio2"]
 
 [node name="Question" type="Node2D" node_paths=PackedStringArray("question_label", "answers")]
 position = Vector2(1, 0)
@@ -114,10 +112,6 @@ position = Vector2(103, -32)
 scale = Vector2(12.7521, 2.10825)
 shape = SubResource("RectangleShape2D_214cf")
 
-[node name="Sprite2D" type="Sprite2D" parent="Answer3/CollisionShape2D"]
-scale = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_8sio2")
-
 [node name="Sprite2D2" type="Sprite2D" parent="Answer3/CollisionShape2D"]
 texture_filter = 1
 scale = Vector2(0.11, 0.17)
@@ -143,10 +137,6 @@ question = NodePath("..")
 position = Vector2(103, -32)
 scale = Vector2(12.7521, 2.10825)
 shape = SubResource("RectangleShape2D_214cf")
-
-[node name="Sprite2D" type="Sprite2D" parent="Answer4/CollisionShape2D"]
-scale = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_8sio2")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Answer4/CollisionShape2D"]
 texture_filter = 1
